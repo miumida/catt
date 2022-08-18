@@ -63,7 +63,7 @@ async def async_setup_entry(hass, config_entry):
 
     # speak add service
     async def scan(service):
-        _LOGGER.error(subp_run(CMD_BASE + ['scan'] ).stdout)
+        _LOGGER.error(subp_run( SCAN_CMD ).stdout)
 
     hass.services.async_register(DOMAIN, "scan", scan)
 
