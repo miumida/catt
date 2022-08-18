@@ -1,10 +1,10 @@
 {
   "domain": "catt",
   "name": "Cast All The Things!",
-  "config_flow": true,
   "documentation": "https://github.com/miumida/catt",
-  "requirements": ["catt>=0.12.7"],
   "dependencies": [],
   "codeowners": ["@miumida"],
+  "requirements": ["catt>=0.12.9"],
+  "config_flow": true,
   "version": "1.0.0"
 }
