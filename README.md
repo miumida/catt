@@ -8,7 +8,7 @@ Cast All The Things! for Home Assistant #HA
 ## Version history
 | Version | Date        | 내용              |
 | :-----: | :---------: | ----------------------- |
-| v1.0.0  | 2022.08.03  | Developing  |
+| v1.0.0  | 2022.08.19  | First version  |
 
 
 ## Installation
