@@ -1,0 +1,51 @@
+scan:
+  # Description of the service
+  description: CATT 장치를 스캔합니다.
+
+stop:
+  # Description of the service
+  description: CATT 장치를 중지합니다.
+  fields:
+    friendly_name:
+      description: "CATT에 사용가능한 장치 이름을 입력하세요."
+      example: "미니"
+      selector:
+        text:
+
+
+command:
+  # Description of the service
+  description: CATT 명령을 호출합니다.
+  fields:
+    friendly_name:
+      description: "CATT에 사용가능한 장치 이름 또는 IP를 입력하세요."
+      example: "미니"
+      selector:
+        text:
+    command:
+      description: "CATT Command를 선택합니다."
+      example: "cast_site"
+      selector:
+        select:
+          options:
+            - cast
+            - cast_site
+            - play
+            - play_toggle
+            - puase
+            - clear
+            - add
+            - remove
+            - seek
+            - ffwd
+            - rewind
+            - volume
+            - volumeUp
+            - volumeDown
+    param:
+      description: "CATT 파라미터를 입력하세요."
+      example: "https://www.naver.com"
+      selector:
+        text:
+
+
