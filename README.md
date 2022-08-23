@@ -1,4 +1,4 @@
-# Cast All The Things!(catt)
+# Cast All The Things!(catt) Service
 ![HAKC)][hakc-shield]
 ![HACS][hacs-shield]
 ![Version v1.0.0][version-shield]
