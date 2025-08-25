@@ -4,7 +4,7 @@
   "documentation": "https://github.com/miumida/catt",
   "dependencies": [],
   "codeowners": ["@miumida"],
-  "requirements": ["catt>=0.12.9"],
+  "requirements": ["catt>=0.13.1"],
   "config_flow": true,
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
