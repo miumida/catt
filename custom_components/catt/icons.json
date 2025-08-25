@@ -1,0 +1,13 @@
+{
+    "services": {
+        "scan": {
+            "service": "mdi:feature-search"
+        },
+        "stop": {
+            "service": "mdi:cast-off"
+        },
+        "command": {
+            "service": "mdi:keyboard"
+        }
+    }
+}
