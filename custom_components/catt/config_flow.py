@@ -32,6 +32,8 @@ class CattConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
 
         await self.async_set_unique_id(uniqid)
 
+        self._abort_if_unique_id_configured()
+
         tit = 'Cast All The Things!'
 
         return self.async_create_entry(title=tit, data=user_input)
