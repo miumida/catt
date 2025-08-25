@@ -1,7 +1,7 @@
 # Cast All The Things!(catt) Service
 ![HAKC)][hakc-shield]
 ![HACS][hacs-shield]
-![Version v1.0.0][version-shield]
+![Version v1.0.1][version-shield]
 
 Cast All The Things! for Home Assistant #HA
 
@@ -9,6 +9,7 @@ Cast All The Things! for Home Assistant #HA
 | Version | Date        | Desc.              |
 | :-----: | :---------: | ----------------------- |
 | v1.0.0  | 2022.08.19  | First version  |
+| v1.0.1  | 2025.08.25  | icons.json Add  |
 
 
 ## Installation
@@ -40,6 +41,6 @@ This can be installed through HACS(Add url to custom repository) by copying all 
 ## Thanks.
 - [catt](https://github.com/skorokithakis/catt) - Library for Python 3
 
-[version-shield]: https://img.shields.io/badge/version-1.0.0-orange.svg
+[version-shield]: https://img.shields.io/badge/version-1.0.1-orange.svg
 [hakc-shield]: https://img.shields.io/badge/HAKC-Enjoy-blue.svg
 [hacs-shield]: https://img.shields.io/badge/HACS-Custom-red.svg
