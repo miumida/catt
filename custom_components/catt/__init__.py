@@ -21,6 +21,13 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
 from homeassistant.helpers import discovery
 
+from homeassistant.core import (
+    HomeAssistant,
+    ServiceResponse,
+    ServiceCall,
+    SupportsResponse,
+)
+
 from .const import DOMAIN
 
 _LOGGER = logging.getLogger(__name__)
@@ -31,13 +38,14 @@ CONFIG_SCHEMA = vol.Schema({DOMAIN: {}}, extra=vol.ALLOW_EXTRA)
 CMD_BASE = ["catt", "-d"]
 VALIDATE_ARGS = ["info", "-j"]
 STOP_ARGS = ["stop"]
-SCAN_CMD = ["catt", "scan", "-j"]
+SCAN_CMD = ["catt", "scan"]
+HELP_CMD = ["catt", "-h"]
 
 def subp_run(cmd, allow_failure: bool = False) -> subprocess.CompletedProcess:
     output = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
     if not allow_failure and output.returncode != 0:
         #raise CattTestError('The command "{}" failed.'.format(" ".join(cmd)))
-        _LOGGER.error(f'[{DOMAIN}]The command "{cmd}" failed.')
+        _LOGGER.error(f'[{DOMAIN}] The command "{cmd}" failed.')
     return output
 
 
@@ -61,11 +69,23 @@ async def async_setup_entry(hass, config_entry):
 
     session = async_get_clientsession(hass)
 
-    # speak add service
+    # scan add service
     async def scan(service):
-        _LOGGER.error(subp_run( SCAN_CMD ).stdout)
+        output = subp_run( SCAN_CMD ).stdout
+        _LOGGER.error(f'[{DOMAIN}] scan service call -> {output}')
 
-    hass.services.async_register(DOMAIN, "scan", scan)
+        return { "output" : output}
+
+    hass.services.async_register(DOMAIN, "scan", scan, supports_response=SupportsResponse.ONLY,)
+
+    # help add service
+    async def help(service):
+        output = subp_run( HELP_CMD ).stdout
+        _LOGGER.error(f'[{DOMAIN}] help service call -> {output}')
+
+        return { "help" : output }
+
+    hass.services.async_register(DOMAIN, "help", help, supports_response=SupportsResponse.ONLY,)
 
 
     async def stop(service):
