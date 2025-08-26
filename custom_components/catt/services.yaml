@@ -2,6 +2,10 @@ scan:
   # Description of the service
   description: CATT 장치를 스캔합니다.
 
+help:
+  # Description of the service
+  description: CATT Help 정보를 호출합니다.
+
 stop:
   # Description of the service
   description: CATT 장치를 중지합니다.
