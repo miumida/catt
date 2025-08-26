@@ -3,6 +3,9 @@
         "scan": {
             "service": "mdi:feature-search"
         },
+        "help": {
+            "service": "mdi:help-box"
+        },
         "stop": {
             "service": "mdi:cast-off"
         },
