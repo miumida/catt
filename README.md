@@ -18,6 +18,8 @@ This can be installed through HACS(Add url to custom repository) by copying all 
 ## Services
 #### scan
   Scan the local network and show all Chromecasts and their IPs.
+#### help
+  Show help.
 #### command
  | commands | Desc.        |
  | ------------- | --------- |
