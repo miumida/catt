@@ -36,6 +36,7 @@ This can be installed through HACS(Add url to custom repository) by copying all 
  | rewind       | Rewind a video by TIME duration. |
  | volume       | Set the volume to LVL [0-100]. |
  | volumedown   | Turn down volume by a DELTA increment. |
+ | volumemute   | Enable or disable mute on supported devices.|
  | volumeup     | Turn up volume by a DELTA increment. |
 #### stop
   Stop playing.
