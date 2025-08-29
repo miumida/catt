@@ -45,6 +45,7 @@ command:
             - rewind
             - volume
             - volumeUp
+            - volumemute
             - volumeDown
     param:
       description: "CATT 파라미터를 입력하세요."
